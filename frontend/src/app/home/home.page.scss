@@ -1,0 +1,204 @@
+#container {
+  text-align: center;
+  margin-top: 20%;
+}
+
+#container strong {
+  font-size: 45px;
+  line-height: 45px;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 30px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#logo {
+  width: 130px;
+  height: 60px;
+}
+
+#header {
+  text-align: center;
+  height: 80px;
+}
+
+#header-title {
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+#imgSlider {
+  width: 100%;
+}
+
+.right {
+  justify-content: flex-end !important;
+}
+
+.right {
+  justify-content: flex-start !important;
+}
+
+.titles {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.rowHeader {
+  flex-direction: row;
+  height: 80px;
+}
+
+.toolbar-title {
+  width: 0% !important;
+}
+
+.titles > * {
+  margin: 20px;
+}
+
+
+
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: absolute;
+  margin-left: 5px;
+  height: 100%;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.menuHeader {
+  height: 18vh;
+  width: 100vw;
+  background-color: #3880ff;
+  border-radius: 0 0 20px 20px;
+  z-index: 1400000000000000;
+  position: absolute;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuHeader > ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.open {
+  display: flex;
+}
+
+.closed {
+  display: none;
+}
+
+#slides {
+  width: 100%;
+  position: absolute;
+}
+
+.rowBody {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mainContent {
+  margin-left: 24%;
+}
+
+.mainContent h1 {
+  font-size: xx-large;
+}
+
+.mainContent p {
+  color: #8c8c8c;
+  font-size: large;
+  line-height: 10px;
+}
+
+.footerRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gitHubLink {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width:1330px) {
+  #container {
+    margin-top: 30%;
+  }
+
+  #container strong {
+    font-size: xx-large;
+  }
+
+  .mainContent {
+    margin-left: 12%;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  .titles {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .mobileMenu > svg {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  #container {
+    margin-top: 50%;
+  }
+
+  #container strong {
+    font-size: xx-large;
+  }
+
+  .mainContent {
+    margin-left: 5%;
+  }
+
+  .mainContent p {
+    line-height: 17px;
+  }
+
+}

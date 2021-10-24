@@ -1,0 +1,83 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar id="header" color="primary">
+    <ion-row class="rowHeader">
+      <div class="logo">
+        <img id="logo" class="logoHeader" width="100" src="assets/img/Anime.png" alt="not found">
+      </div>
+      <div class="titles">
+        <h1>
+          <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+        </h1>
+        <h1>
+          <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+        </h1>
+      </div>
+      <div id="mobileMenu" class="mobileMenu">
+        <svg (click)="showMobileMenu()" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+          <title>Menu</title>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+            d="M80 160h352M80 256h352M80 352h352" />
+        </svg>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<div id="menuHeader" class="menuHeader closed">
+  <ul>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+      </h1>
+    </li>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+      </h1>
+    </li>
+  </ul>
+</div>
+
+<ion-content class="mainContent">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="cardTitle">Actualiza los datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label class="postLabel">Nombre</ion-label>
+        <ion-input required [(ngModel)]="studio.studioName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="postLabel">Central</ion-label>
+        <ion-input required [(ngModel)]="studio.hq"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="postLabel">Fundación (año)</ion-label>
+        <ion-input required [(ngModel)]="studio.foundationYear"></ion-input>
+      </ion-item>
+      <div class="postButtons">
+        <ion-button color="primary" id="sendButton" mode="ios" (click)="onSubmit()">Editar</ion-button>
+        <ion-button color="danger" id="cancelButton" mode="ios" href="/crud">Cancelar</ion-button>
+      </div>
+      <h1 id="postSuccesful" [hidden]="!submitted">Envío satisfactorio</h1>
+      <h1 id="somethingIsMissing" [hidden]="!error">ERROR: Falta algún dato</h1>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="footer" [translucent]="true" mode="md">
+  <ion-toolbar id="footer">
+    <ion-row class="footerRow">
+      <div class="footerTitle">
+        <ion-title>Sígueme en:</ion-title>
+      </div>
+      <div class="footerLinks">
+        <ion-router-link id="gitHubLink" href="https://github.com/PdgarHern"><img src="assets/img/gitHubLogo.png" width="40px">
+        </ion-router-link>
+        <ion-router-link id="twitterLink" href="https://twitter.com/Peger81"><img src="assets/img/twitter-logo-2-1.png" width="40px">
+        </ion-router-link>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

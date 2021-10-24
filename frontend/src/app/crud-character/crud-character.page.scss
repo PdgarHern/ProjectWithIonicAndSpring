@@ -1,0 +1,292 @@
+#container {
+  text-align: center;
+  margin-top: 20%;
+}
+
+#container strong {
+  font-size: 45px;
+  line-height: 45px;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 30px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#logo {
+  width: 130px;
+  height: 60px;
+}
+
+#header {
+  text-align: center;
+  height: 80px;
+}
+
+#header-title {
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+#imgSlider {
+  width: 100%;
+}
+
+.right {
+  justify-content: flex-end !important;
+}
+
+.right {
+  justify-content: flex-start !important;
+}
+
+.titles {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.rowHeader {
+  flex-direction: row;
+  height: 80px;
+}
+
+.toolbar-title {
+  width: 0% !important;
+}
+
+.titles > * {
+  margin: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: absolute;
+  margin-left: 5px;
+  height: 100%;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.menuHeader {
+  height: 18vh;
+  width: 100vw;
+  background-color: #3880ff;
+  border-radius: 0 0 20px 20px;
+  z-index: 1400000000000000;
+  position: absolute;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuHeader > ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.open {
+  display: flex;
+}
+
+.closed {
+  display: none;
+}
+
+.footerRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gitHubLink {
+  margin-right: 10px;
+}
+
+.contentRow {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 75%;
+}
+
+#cardTitle {
+  font-size: xx-large;
+}
+
+.contentRow p {
+  font-size: x-large;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  height: 100% !important;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.cardButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  // position: absolute;
+  bottom: 20px;
+}
+
+.cardButtons > * {
+  width: 80px;
+  height: 50px;
+  margin-inline: 20px;
+}
+
+.animeBanner {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.animeBanner > img {
+  width: 148px;
+  height: 184px;
+}
+
+.addButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 99%;
+  position: fixed;
+  z-index: 100000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#addButton {
+  font-size: xx-large;
+}
+
+@media only screen and (max-width:1330px) {
+  #container {
+    margin-top: 30%;
+  }
+
+  #container strong {
+    font-size: xx-large;
+  }
+
+  .mainContent {
+    margin-left: 12%;
+  }
+
+  .animeBanner > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #addButton {
+    font-size: x-large;
+  }
+  
+
+}
+
+@media only screen and (max-width:750px) {
+  .titles {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .mobileMenu > svg {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  #container {
+    margin-top: 50%;
+  }
+
+  #container strong {
+    font-size: xx-large;
+  }
+
+  .mainContent {
+    margin-left: 5%;
+  }
+
+  .mainContent p {
+    line-height: 17px;
+  }
+
+  #cardTitle {
+    font-size: x-large;
+  }
+  
+  .contentRow p {
+    font-size: large;
+  }
+
+  .cardText {
+    width: 35%;
+  }
+
+  .cardText p {
+    font-size: small;
+  }
+
+  .animeBanner {
+    width: 65%;
+  }
+
+  .animeBanner > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #addButton {
+    font-size: large;
+  }
+  
+  .cardButtons > * {
+    width: 40px;
+    height: 25px;
+    margin-inline: 5px;
+  }
+
+}

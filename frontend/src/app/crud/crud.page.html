@@ -1,0 +1,84 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar id="header" color="primary">
+    <ion-row class="rowHeader">
+      <div class="logo">
+        <img id="logo" class="logoHeader" width="100" src="assets/img/Anime.png" alt="not found">
+      </div>
+      <div class="titles">
+        <h1>
+          <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+        </h1>
+        <h1>
+          <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+        </h1>
+      </div>
+      <div id="mobileMenu" class="mobileMenu">
+        <svg (click)="showMobileMenu()" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+          <title>Menu</title>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+            d="M80 160h352M80 256h352M80 352h352" />
+        </svg>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<div id="menuHeader" class="menuHeader closed">
+  <ul>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+      </h1>
+    </li>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+      </h1>
+    </li>
+  </ul>
+</div>
+
+<ion-content>
+  <div class="addButton">
+    <ion-button color="primary" mode="ios" id="addButton" href="/post">Añadir</ion-button>
+  </div>
+  
+  <ion-row class="contentRow">
+    <ion-card *ngFor="let a of animes" >
+      <ion-card-header>
+        <ion-card-title id="cardTitle">{{a.title}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="cardContent">
+        <div class="cardText">
+          <p>{{a.studio.studioName}}</p>
+          <p>{{a.year}}</p>
+          <div class="cardButtons">
+            <ion-button color="primary" mode="ios" href="/crud-character/{{a.id}}">Personajes</ion-button>
+            <ion-button color="secondary" mode="ios" href="/put/{{a.id}}"><ion-icon name="create"></ion-icon></ion-button>
+            <ion-button color="danger" mode="ios" (click)="deleteAnime(a.id)"><ion-icon name="trash"></ion-icon></ion-button>
+          </div>
+        </div>
+        <div class="animeBanner">
+          <img src="{{a.image}}" alt="Not Found">
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-content>
+
+<ion-footer class="footer" [translucent]="true" mode="md">
+  <ion-toolbar id="footer">
+    <ion-row class="footerRow">
+      <div class="footerTitle">
+        <ion-title>Sígueme en:</ion-title>
+      </div>
+      <div class="footerLinks">
+        <ion-router-link id="gitHubLink" href="https://github.com/PdgarHern"><img src="assets/img/gitHubLogo.png" width="40px">
+        </ion-router-link>
+        <ion-router-link id="twitterLink" href="https://twitter.com/Peger81"><img src="assets/img/twitter-logo-2-1.png" width="40px">
+        </ion-router-link>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

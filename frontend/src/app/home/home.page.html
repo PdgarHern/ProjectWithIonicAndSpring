@@ -1,0 +1,95 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar id="header" color="primary">
+    <ion-row class="rowHeader">
+      <div class="logo">
+        <img id="logo" class="logoHeader" width="100" src="assets/img/Anime.png" alt="not found">
+      </div>
+      <div class="titles">
+        <h1>
+          <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+        </h1>
+        <h1>
+          <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+        </h1>
+      </div>
+      <div id="mobileMenu" class="mobileMenu">
+        <svg (click)="showMobileMenu()" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+          <title>Menu</title>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+            d="M80 160h352M80 256h352M80 352h352" />
+        </svg>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<div id="menuHeader" class="menuHeader closed">
+  <ul>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="">Tu página de Anime</ion-router-link>
+      </h1>
+    </li>
+    <li>
+      <h1>
+        <ion-router-link id="header-title" href="/crud">Accede a la información</ion-router-link>
+      </h1>
+    </li>
+  </ul>
+</div>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row class="rowBody">
+    <ion-slides id="slides" #slider loop="true" pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="assets/img/slide1.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/img/slide2.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/img/slide3.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/img/slide4.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/img/slide5.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/img/slideAnime.png">
+      </ion-slide>
+    </ion-slides>
+    <div id="container">
+      <strong>Tu página de Anime</strong>
+      <p>Información sobre tus animes favoritos</p>
+    </div>
+  </ion-row>
+
+  <div class="mainContent">
+    <br />
+    <h1>¡Bienvenido querido Shinobi!</h1>
+    <p>En esta página puedes encontrar algunos datos de interés sobre tus animes favoritos.</p>
+    <p>Además ofrecemos la posibilidad a todos los usuarios de añadir nuevo contenido, modificar el ya</p>
+    <p>existente en caso de que sea necesario o incluso eliminarlo si es completamente erróneo.</p>
+    <p>Para empezar solo tienes que pinchar en "Accede a la información". ¡Suerte querido Shinobi!</p>
+  </div>
+
+</ion-content>
+
+<ion-footer class="footer" [translucent]="true" mode="md">
+  <ion-toolbar id="footer">
+    <ion-row class="footerRow">
+      <div class="footerTitle">
+        <ion-title>Sígueme en:</ion-title>
+      </div>
+      <div class="footerLinks">
+        <ion-router-link id="gitHubLink" href="https://github.com/PdgarHern"><img src="assets/img/gitHubLogo.png" width="40px">
+        </ion-router-link>
+        <ion-router-link id="twitterLink" href="https://twitter.com/Peger81"><img src="assets/img/twitter-logo-2-1.png" width="40px">
+        </ion-router-link>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
